@@ -28,7 +28,7 @@ import CustomHeader from "./componentes/customHeader";
       
   return (
     <>
-      <h1>Primeros componentes</h1>
+      <h1>PRIMER componentes</h1>
       <hr />
       <button onClick={suMando}>+1 </button>
       <button onClick={reset}>reset </button>
