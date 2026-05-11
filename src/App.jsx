@@ -12,7 +12,8 @@ export const App = () => {
       />
      
 <br />
-      Este es mi contenido del cuerpo del documento.
+      {/* Colocar 2 inputText y sumar su valor en un tercer input
+      con las etiquetas */}
       <hr />
       <Yfooter />
     </>
