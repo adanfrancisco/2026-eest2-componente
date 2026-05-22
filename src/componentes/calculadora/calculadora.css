@@ -21,8 +21,9 @@ body {
 
 .display {
     width: 100%;
+    font-size: 3.0rem;
     height: 100px;
-    background: #111827;
+    background: #ced3de;
     border-radius: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -41,7 +42,7 @@ body {
     border: none;
     border-radius: 18px;
     background: #374151;
-    color: #ffffff;
+    color: #e8c5c5;
     font-size: 1.4rem;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -55,8 +56,8 @@ body {
     transform: scale(0.96);
 }
 
-operator,
+.operator,
 .equals {
-    background: #3b82f6;
+    background: #012d0e;
 }
 

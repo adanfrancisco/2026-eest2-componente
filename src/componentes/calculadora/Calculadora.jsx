@@ -1,39 +1,53 @@
-import './Calculadora.css';
+import { useState } from "react";
+import "./calculadora.css";
+
 const Calculadora = () => {
-    return (
-      <>
-        <div class="calculator">
-          <div class="display">
-            <span id="display">0</span>
-          </div>
-          <div class="buttons">
-            <button class="btn action clear">AC</button>
-            <button class="btn action delete">⌫</button>
-            <button class="btn action percent">%</button>
-            <button class="btn operator divide">÷</button>
+    const [display, setDisplay] = useState('0');
+    
+  const handleNumber = (num) => {
+      display === '0'
+          ? setDisplay(num)
+          : setDisplay(display + num)
+  };
 
-            <button class="btn number">7</button>
-            <button class="btn number">8</button>
-            <button class="btn number">9</button>
-            <button class="btn operator">×</button>
-
-            <button class="btn number">4</button>
-            <button class="btn number">5</button>
-            <button class="btn number">6</button>
-            <button class="btn operator">−</button>
-
-            <button class="btn number">1</button>
-            <button class="btn number">2</button>
-            <button class="btn number">3</button>
-            <button class="btn operator">+</button>
-
-            <button class="btn number zero">0</button>
-            <button class="btn decimal">.</button>
-            <button class="btn equals">=</button>
-          </div>
+  return (
+    <>
+      <div className="calculator">
+        <div className="display">
+          <span id="display">{display}</span>
         </div>
-      </>
-    );
-}
 
-export default Calculadora
+        <div className="buttons">
+          <button className="btn action clear">AC</button>
+          <button className="btn action delete">⌫</button>
+          <button className="btn action percent">%</button>
+          <button className="btn operator divide">÷</button>
+          <button onClick={()=>handleNumber("7")} className="btn number">
+            7
+          </button>
+          <button onClick={() => handleNumber("8")} className="btn number">
+            8
+          </button>
+          <button className="btn number">9</button>
+          <button className="btn operator">×</button>
+
+          <button className="btn number">4</button>
+          <button className="btn number">5</button>
+          <button className="btn number">6</button>
+          <button className="btn operator">−</button>
+
+          <button className="btn number">1</button>
+          <button className="btn number">2</button>
+          <button className="btn number">3</button>
+          <button className="btn operator">+</button>
+
+          <button className="btn number zero">0</button>
+          <button className="btn decimal">.</button>
+          <button className="btn equals">=</button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Calculadora;
