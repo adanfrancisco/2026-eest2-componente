@@ -1,13 +1,7 @@
 import Calculadora from "./componentes/calculadora/Calculadora";
-
-
-    
-    export const App = () => {
-  
-      
+export const App = () => {
   return (
     <>
-
       <Calculadora />
     </>
   );
