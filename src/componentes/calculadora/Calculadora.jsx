@@ -1,14 +1,54 @@
 import { useState } from "react";
 import "./calculadora.css";
 
+const BUTTONS = [
+  { label: "AC", type: "action", cls: "clear" },
+  { label: "⌫", type: "action", cls: "delete" },
+  { label: "%", type: "action", cls: "percent" },
+  { label: "÷", type: "operator", cls: "divide" },
+  { label: "7", type: "number" },
+  { label: "8", type: "number" },
+  { label: "9", type: "number" },
+  { label: "×", type: "operator" },
+  { label: "4", type: "number" },
+  { label: "5", type: "number" },
+  { label: "6", type: "number" },
+  { label: "−", type: "operator" },
+  { label: "1", type: "number" },
+  { label: "2", type: "number" },
+  { label: "3", type: "number" },
+  { label: "+", type: "operator" },
+  { label: "0", type: "number", cls: "zero" },
+  { label: ".", type: "decimal" },
+  { label: "=", type: "equals" },
+];
+
 const Calculadora = () => {
-    const [display, setDisplay] = useState('0');
-    
+  const [display, setDisplay] = useState("0");
+
   const handleNumber = (num) => {
-      display === '0'
-          ? setDisplay(num)
-          : setDisplay(display + num)
+    display === "0" ? setDisplay(num) : setDisplay(display + num);
   };
+
+  const construyeClassName = (btn) => {
+    let className = "btn";
+    if (btn.type === "number") className += " number";
+    if (btn.type === "operator" || btn.type === "equals") className += " operator";
+    if (btn.type === "action") className += " action";
+    if (btn.type === "decimal") className += " decimal";
+    if (btn.type === "equals") className += " equals";
+    if (btn.cls) className += ` ${btn.cls}`;
+    return className;
+  };
+
+  const handleClick = (btn) => {
+    if (btn.type === "number") handleNumber(btn.label);
+    if (btn.type === "operator") handleNumber(` ${btn.label} `);
+    if (btn.type === "decimal") handleNumber(btn.label);
+    if (btn.label === "AC") setDisplay("0");
+    if (btn.label === "⌫") setDisplay(display.slice(0, -1) || "0");
+    if (btn.label === "%") handleNumber(" % ");
+  }
 
   return (
     <>
@@ -18,32 +58,15 @@ const Calculadora = () => {
         </div>
 
         <div className="buttons">
-          <button className="btn action clear">AC</button>
-          <button className="btn action delete">⌫</button>
-          <button className="btn action percent">%</button>
-          <button className="btn operator divide">÷</button>
-          <button onClick={()=>handleNumber("7")} className="btn number">
-            7
-          </button>
-          <button onClick={() => handleNumber("8")} className="btn number">
-            8
-          </button>
-          <button className="btn number">9</button>
-          <button className="btn operator">×</button>
-
-          <button className="btn number">4</button>
-          <button className="btn number">5</button>
-          <button className="btn number">6</button>
-          <button className="btn operator">−</button>
-
-          <button className="btn number">1</button>
-          <button className="btn number">2</button>
-          <button className="btn number">3</button>
-          <button className="btn operator">+</button>
-
-          <button className="btn number zero">0</button>
-          <button className="btn decimal">.</button>
-          <button className="btn equals">=</button>
+          {BUTTONS.map((btn) => (
+            <button
+              key={btn.label}
+              className={construyeClassName(btn)}
+              onClick={() => handleClick(btn)}
+            >
+              {btn.label}
+            </button>
+          ))}
         </div>
       </div>
     </>

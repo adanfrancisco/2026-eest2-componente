@@ -1,8 +1,11 @@
-import Calculadora from "./componentes/calculadora/Calculadora";
+import Mapx from "./componentes/map/Map";
+
+// import Calculadora from "./componentes/calculadora/Calculadora";
 export const App = () => {
   return (
     <>
-      <Calculadora />
+      <Mapx />
+      {/* <Calculadora /> */}
     </>
   );
 };
