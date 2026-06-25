@@ -3,6 +3,7 @@ interface Props {
     descripcion?: string;
 }
 
+
 const CustomHeader = ({titulo, descripcion}:Props) => {
     return (
         <div className="content-center" >
@@ -11,6 +12,7 @@ const CustomHeader = ({titulo, descripcion}:Props) => {
         </div>
     )
 }
+
 
 export default CustomHeader
 
