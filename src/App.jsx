@@ -4,7 +4,13 @@ import  './hola.css';
 export const App = () => {
 
 return (
-  <h1 id="centro" > Hola </h1>
-)
+  <>
+  <div classname = id ='centro' > Arriba </div>
+  <div classname = id ='centro' > Arriba </div>
+  <div classname = id ='centro' > Arriba </div>
 
-}
+  
+  </>
+);
+
+};
