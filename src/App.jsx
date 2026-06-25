@@ -1,28 +1,28 @@
-import './app.css'
+import "./app.css";
 
 export const App = () => {
-   const datos = [
-    { fila: 'Arriba', color: 'color-arriba' },
-    { fila: 'Centro', color: 'color-centro' },
-    { fila: 'Abajo', color: 'color-abajo' }
-  ];
-
-  const columnas = ['Izq', 'Cen', 'Der'];
-
   return (
     <div className="app-container">
-      {datos.map((item, rowIndex) => (
-        <div key={rowIndex} className="fila">
-          {columnas.map((col, colIndex) => (
-            <div 
-              key={`${rowIndex}-${colIndex}`}
-              className={`palabra ${item.color}`}
-            >
-              {item.fila} {col}
-            </div>
-          ))}
-        </div>
-      ))}
+      {/* FILA ARRIBA */}
+      <div className="fila">
+        <div className="palabra color-arriba">Arriba Izq</div>
+        <div className="palabra color-arriba">Arriba Cen</div>
+        <div className="palabra color-arriba">Arriba Der</div>
+      </div>
+
+      {/* FILA CENTRO */}
+      <div className="fila">
+        <div className="palabra color-centro">Centro Izq</div>
+        <div className="palabra color-centro">Centro Cen</div>
+        <div className="palabra color-centro">Centro Der</div>
+      </div>
+
+      {/* FILA ABAJO */}
+      <div className="fila">
+        <div className="palabra color-abajo">Abajo Izq</div>
+        <div className="palabra color-abajo">Abajo Cen</div>
+        <div className="palabra color-abajo">Abajo Der</div>
+      </div>
     </div>
   );
 };

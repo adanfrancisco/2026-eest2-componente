@@ -1,7 +1,15 @@
+/* Reset y contenedor principal */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 .app-container {
@@ -24,16 +32,23 @@
   font-size: 2rem;
   font-family: Arial, sans-serif;
   font-weight: bold;
+  text-align: center;
 }
 
 .color-arriba {
-  color: #e74c3c;
+  color: #e74c3c; /* Rojo */
 }
 
 .color-centro {
-  color: #3498db;
+  color: #3498db; /* Azul */
 }
 
 .color-abajo {
-  color: #2ecc71;
+  color: #2ecc71; /* Verde */
+}
+
+.palabra:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
