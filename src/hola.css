@@ -1,4 +1,25 @@
-#centro {
+/*#centro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+
+}
+
+#derecha {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+
+}
+
+#izquierda {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +32,13 @@
 .fila {
   display: flex;
   justify-content:space-between;
-  flex: 1
-  
+  flex: 1;
+  align-items: center;
+  padding: 0 20px;
 }
+
+#body{
+  display: flex;
+
+}
+*/

@@ -1,4 +1,4 @@
-interface encabezadoX {
+/*interface encabezadoX {
   titulo: string;//variable opcional
   saludo?: string;
   encabezado?: string;
@@ -13,9 +13,10 @@ const Yheader = ({ titulo, saludo, encabezado }: encabezadoX) => {
       <p style  = {{backgroundColor: "green" }}>{saludo}</p>
       <br />
       {/* template string */}
-      {`Este es el encabezado: ${encabezado}`}
-      {/* <p>Yo soy Yheader</p> */}
-    </>
-  );
-}
-export default Yheader;
+      //{`Este es el encabezado: ${encabezado}`}
+     //{/* <p>Yo soy Yheader</p> */}
+   // </>
+  //);
+//}
+//export default Yheader;
+*/

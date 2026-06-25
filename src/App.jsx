@@ -1,16 +1,13 @@
 
-import  './hola.css';
+import React from 'react';
+import { Pepe } from './Pepe';
 
 export const App = () => {
-
-return (
-  <>
-  <div classname = id ='centro' > Arriba </div>
-  <div classname = id ='centro' > Arriba </div>
-  <div classname = id ='centro' > Arriba </div>
-
-  
-  </>
-);
-
+  return (
+      <Pepe 
+        nombre="jennifer"
+        apellido="Aima" 
+        escuela="eestn2" 
+      />
+  );
 };
