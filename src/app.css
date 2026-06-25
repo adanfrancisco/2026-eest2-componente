@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: #f0f0f0;
+}
+
+.fila {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.palabra {
+  font-size: 2rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.color-arriba {
+  color: #e74c3c;
+}
+
+.color-centro {
+  color: #3498db;
+}
+
+.color-abajo {
+  color: #2ecc71;
+}
