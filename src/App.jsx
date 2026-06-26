@@ -1,13 +1,18 @@
-
 import React from 'react';
-import { Pepe } from './Pepe';
+import Numeros from './numeros'; 
+import Pepe from './Pepe';       
 
-export const App = () => {
+export const App = () => { 
   return (
+    <>
+      <Numeros />
       <Pepe 
         nombre="jennifer"
         apellido="Aima" 
-        escuela="eestn2" 
+        curso="programacion" 
       />
+    </>
   );
 };
+
+export default App; 
