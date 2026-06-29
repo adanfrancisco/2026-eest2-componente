@@ -4,10 +4,21 @@ const RickImage = () => {
   const [personaje, setPersonaje] = useState(null);
 
   useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/character/1")
-      .then((res) => res.json())
-      .then((data) => setPersonaje(data));
-  }, []);
+    const obtenerPersonaje = async () => {
+      try {
+        const respuesta = await fetch(
+          "https://rickandmortyapi.com/api/character/1",
+        );
+        const datos = await respuesta.json();
+        setPersonaje(datos);
+      } catch (error) {
+        console.error("Error al obtener el personaje:", error);
+      }
+    };
+
+    obtenerPersonaje();
+  }, []); // El array vacío asegura que solo se ejecute una vez
+
   console.log(personaje);
 
   if (!personaje) return <p>Cargando...</p>;
