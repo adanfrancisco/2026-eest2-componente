@@ -17,12 +17,12 @@ body,
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background: #f0f0f0;
+  background: #ffffff;
 }
 
 .fila {
   display: flex;
-  flex: 1;
+  flex: 1; /* flexibiliza el texto en el largo de la pantalla */
   justify-content: space-around;
   align-items: center;
   padding: 0 20px;
@@ -32,7 +32,6 @@ body,
   font-size: 2rem;
   font-family: Arial, sans-serif;
   font-weight: bold;
-  text-align: center;
 }
 
 .color-arriba {
