@@ -1,10 +1,13 @@
 import "./app.css";
-import RickImage from "./componentes/RickImage";
+import { FetchApi } from "./componentes/FetchApi";
+// import RickImage from "./componentes/RickImage";
 
 export const App = () => {
   return (
     <>
-      <RickImage />
+      {/* <h1>Hola mundo</h1> */}
+      {/* <RickImage /> */}
+      <FetchApi />
     </>
   );
 };
