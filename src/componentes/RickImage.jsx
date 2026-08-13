@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-const RickImage = () => {
-  const [personaje, setPersonaje] = useState(null);
+const RickImage = ({ numero }) => {
+  const [personaje, setPersonaje] = useState(1);
 
   useEffect(() => {
     const obtenerPersonaje = async () => {
       try {
         const respuesta = await fetch(
-          "https://rickandmortyapi.com/api/character/1",
+          `https://rickandmortyapi.com/api/character/${numero}`,
         );
         const datos = await respuesta.json();
         setPersonaje(datos);
@@ -17,8 +17,7 @@ const RickImage = () => {
     };
 
     obtenerPersonaje();
-  }, []); // El array vacío asegura que solo se ejecute una vez
-
+  }, [numero]);
   console.log(personaje);
 
   if (!personaje) return <p>Cargando...</p>;
