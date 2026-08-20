@@ -16,7 +16,7 @@ export const App = () => {
   // const resultado = [...frutas, ...vegetales].filter(
   //   (item) => item != "lechuga",
   // );
-  const resultado = [...frutas, "pera", "durazno", 99, ...vegetales];
+  const resultado = [...frutas, "pera", "durazno", 99, ...vegetales.];
   // const resultado = personas.filter((persona) => persona.nombre != "n");
   console.log(resultado);
 
