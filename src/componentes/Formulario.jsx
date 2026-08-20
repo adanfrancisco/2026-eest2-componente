@@ -31,8 +31,14 @@ const Formulario = () => {
   const [validated, setValidated] = useState(false);
 
   const handleChange = (e) => {
+    // console.log(e.target);
+    // console.log("nombre: ", e.target.name);
+    // console.log("valor: ", e.target.value);
     const { name, value } = e.target;
+    console.log("nombre: " + name + " valor: " + value);
+
     setFormData({ ...formData, [name]: value });
+    console.log(formData);
   };
 
   const handlePhotoChange = (e) => {
@@ -70,7 +76,7 @@ const Formulario = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 ">
       <Row className="justify-content-md-center">
         <Col md={8} lg={6}>
           <Card>
@@ -145,6 +151,7 @@ const Formulario = () => {
                     required
                     placeholder="Tu nombre completo"
                   />
+
                   <Form.Control.Feedback type="invalid">
                     Por favor ingresa tu nombre.
                   </Form.Control.Feedback>
