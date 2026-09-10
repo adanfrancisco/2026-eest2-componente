@@ -1,10 +1,13 @@
 import "./app.css";
-import Formulario from "./componentes/Formulario";
+// import Counter from "./componentes/Memo";
+import Filtrado from "./componentes/Filtrado";
 
 export const App = () => {
   return (
     <>
-      <Formulario />
+      {/* <Counter count={1.2} /> */}
+
+      <Filtrado />
     </>
   );
 };
